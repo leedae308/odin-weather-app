@@ -44,8 +44,8 @@ body {
 
 .search > input {
   background-color: transparent;
-  color: rgba(0, 0, 0, 0.5);
   border: none;
+  color: white;
   font-size: 1rem;
   padding: 0.5rem;
   flex: 1;
@@ -53,18 +53,31 @@ body {
   border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
   margin-right: 1rem;
 }
+.search > input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search > input:focus {
+  outline: none;
+  /* border: none; */
+  box-shadow: none;
+}
 
 .search > button {
   border: none;
   border-radius: 0.3rem;
-  color: blue;
+  color: #008fc5;
   font-size: 1rem;
   padding: 0.8rem 1rem;
 }
 
+.search > button:hover {
+    opacity: 0.8;
+}
+
 .city-name {
   justify-self: center;
-  margin: 2rem 0;
+  margin: 3rem 0 1.5rem;
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
@@ -73,7 +86,7 @@ body {
 }
 
 .weather {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: rgba(0, 0, 0, 0.4);
   font-weight: 600;
   font-size: 0.9rem;
@@ -93,33 +106,33 @@ body {
 }
 
 .temp {
-    justify-self: center;
-    font-size: 4rem;
-    color: white;  
-    font-weight: bold;
-    padding: 2rem;
+  justify-self: center;
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  padding: 2rem;
 }
 
-.min-max{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 4rem;
-    /* gap: 1rem; */
-    color: white;
+.min-max {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 4rem;
+  /* gap: 1rem; */
+  color: white;
 }
 
-.min{
-    justify-self: right;
-    justify-items: center;
-    border-right: 1px rgba(255,255,255,0.3) solid;
-    padding-right: 0.5rem;
+.min {
+  justify-self: right;
+  justify-items: center;
+  border-right: 1px rgba(255, 255, 255, 0.3) solid;
+  padding-right: 0.5rem;
 }
-.max{
-    justify-self: left;
-    justify-items: center;
-    padding-left: 0.5rem;
+.max {
+  justify-self: left;
+  justify-items: center;
+  padding-left: 0.5rem;
 }
-.type{
-    font-weight: bold;
-    margin-bottom: 0.2rem;
+.type {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
 }

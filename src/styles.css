@@ -1,4 +1,125 @@
-body{
-    font-size: 16rem;
+:root {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(https://cdn.prod.website-files.com/66977165cd86d4c39565c33a/66977165cd86d4c39565c378_SDGLab-Backgrounds-RGB-05.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.weather-app {
+  display: grid;
+  grid-template-rows: repeat(auto, 6);
+  padding: 0 2rem;
+  /* width: 30vw; */
+  border-radius: 0.3rem;
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+
+  background: rgba(255, 255, 255, 0.2); /* Slightly transparent */
+  backdrop-filter: blur(10px); /* Adjust blur strength */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+.search {
+  margin-top: 3rem;
+  display: flex;
+}
+
+.search > input {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  flex: 1;
+
+  border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+  margin-right: 1rem;
+}
+
+.search > button {
+  border: none;
+  border-radius: 0.3rem;
+  color: blue;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+}
+
+.city-name {
+  justify-self: center;
+  margin: 2rem 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  /* text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); */
+}
+
+.weather {
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.main-weather {
+  justify-self: center;
+  margin-bottom: 0.4rem;
+}
+.description {
+  justify-self: center;
+}
+
+.icon {
+  border: 1px solid black;
+  justify-self: center;
+  padding: 2rem;
+}
+
+.temp {
+    justify-self: center;
+    font-size: 4rem;
+    color: white;  
     font-weight: bold;
+    padding: 2rem;
+}
+
+.min-max{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 4rem;
+    /* gap: 1rem; */
+    color: white;
+}
+
+.min{
+    justify-self: right;
+    justify-items: center;
+    border-right: 1px rgba(255,255,255,0.3) solid;
+    padding-right: 0.5rem;
+}
+.max{
+    justify-self: left;
+    justify-items: center;
+    padding-left: 0.5rem;
+}
+.type{
+    font-weight: bold;
+    margin-bottom: 0.2rem;
 }
